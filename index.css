@@ -1,0 +1,1800 @@
+/* framework */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: ease-in-out all .3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #1E1E1E;
+    font-family: 'Cairo', sans-serif;
+    position: relative;
+}
+
+.contain {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.title .head {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 800;
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.title .head span {
+    color: rgb(255, 255, 255, .5);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.title .logo picture img {
+    width: 60px;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: transparent;
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+main .container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+section .contain {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+
+/* header */
+
+header .contain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+header .contain .options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+header .contain .options .logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header .contain .options .logo picture img {
+    width: 80px;
+}
+
+header .contain ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+header .contain ul li a {
+    font-size: 22px;
+    color: #fff;
+}
+
+header .contain ul li a:hover {
+    cursor: pointer;
+    color: #F25123;
+}
+
+header .contain .btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header .contain .btn button {
+    border: 2px solid #fff;
+    color: #000;
+    font-size: 20px;
+    padding: 10px 40px;
+    background-color: #fff;
+}
+
+header .contain .btn button:hover {
+    color: #fff;
+    background-color: transparent;
+}
+
+
+/* Home Section */
+
+section.home .contain {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+section.home .contain .content {
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+section.home .contain .content h1 {
+    font-size: 70px;
+    font-weight: 200;
+    color: #fff;
+    margin: 0;
+}
+
+section.home .contain .content h1 span {
+    font-weight: 800;
+}
+
+section.home .contain .content .search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+section.home .contain .content .search:hover i:last-child {
+    transform: translateX(5px) translateY(-50%);
+}
+
+section.home .contain .content .search i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    cursor: pointer;
+}
+
+section.home .contain .content .search i img {
+    width: 100%;
+}
+
+section.home .contain .content .search i:first-of-type {
+    left: 30px;
+}
+
+section.home .contain .content .search i:last-of-type {
+    right: 30px;
+}
+
+section.home .contain .content .search input {
+    background-image: url("./imgs/msp-back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 22px;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #111;
+}
+
+section.home .contain .content .data {
+    gap: 20px;
+}
+
+section.home .contain .content .data,
+section.home .contain .content .data .pics {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+section.home .contain .content .data .pics picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+section.home .contain .content .data .pics picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+section.home .contain .content .data .pics picture:first-child {
+    z-index: 4;
+}
+
+section.home .contain .content .data .pics picture:nth-child(2) {
+    transform: translateX(-20px);
+    z-index: 3;
+}
+
+section.home .contain .content .data .pics picture:nth-child(3) {
+    transform: translateX(-40px);
+    z-index: 2;
+}
+
+section.home .contain .content .data .pics picture:nth-child(4) {
+    transform: translateX(-60px);
+    z-index: 1;
+}
+
+section.home .contain .content .data .text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+section.home .contain .content .data .text>div {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+section.home .contain .content .data .text .num {
+    font-size: 30px;
+    font-weight: 800;
+    color: #fff;
+}
+
+section.home .contain .content .data .text span {
+    font-size: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255, .5);
+    font-weight: 500;
+}
+
+section.home .contain .logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+section.home .contain .logo picture img {
+    width: 100%;
+}
+
+
+/* works section */
+
+.works .contain {
+    display: grid;
+    align-items: center;
+    justify-content: stretch;
+    gap: 50px;
+    background-color: #fff;
+}
+
+.works .contain .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.works .contain .head .content {
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.works .contain .head .content h2 {
+    color: #F25123;
+    font-size: 50px;
+}
+
+.works .contain .head .content p {
+    color: rgb(0, 0, 0, .5);
+    font-size: 22px;
+    width: 80%;
+}
+
+.works .contain .head .btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.works .contain .head .btn button {
+    background-color: #F25123;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #F25123;
+}
+
+.works .contain .head .btn button:hover {
+    background-color: transparent;
+    color: #F25123;
+}
+
+.works .contain .boxes {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.works .contain .boxes .box {
+    padding: 30px;
+    background-color: #fff;
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.works .contain .boxes .box:hover {
+    transform: translateY(-5px);
+}
+
+.works .contain .boxes .box .name {
+    color: #000000;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.works .contain .boxes .box picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.works .contain .boxes .box:nth-child(even) picture img {
+    border: 5px solid #F25123;
+}
+
+.works .contain .boxes .box:nth-child(odd) picture img {
+    border: 5px solid #1E1E1E;
+}
+
+.works .contain .boxes .box p {
+    color: rgb(0, 0, 0, .5);
+    font-size: 20px;
+}
+
+.works .contain .boxes .box .btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.works .contain .boxes .box .btn button {
+    background-color: transparent;
+    color: #F25123;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #333;
+    padding: 6px 20px;
+}
+
+.works .contain .boxes .box .btn button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* price Section */
+
+.price .contain {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+}
+
+.price .contain .head {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.price .contain .head h2 {
+    font-size: 50px;
+    color: #F25123;
+    font-weight: 800;
+}
+
+.price .contain .head p {
+    color: rgb(255, 255, 255, .5);
+    font-size: 25px;
+    width: 80%;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}
+
+.price .contain .offers {
+    display: grid;
+    align-items: center;
+    justify-content: stretch;
+    gap: 50px;
+}
+
+.price .contain .offers .boxes {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 50px;
+}
+
+.price .contain .offers .boxes .box {
+    border: 2px solid rgb(255, 255, 255, .5);
+    display: grid;
+    align-items: center;
+    justify-content: stretch;
+    gap: 30px;
+    padding: 40px 20px;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.price .contain .offers .boxes .box.active {
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.price .contain .offers .boxes .box:nth-child(even) {
+    background-image: url("./imgs//msp-back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.price .contain .offers .boxes .box .head {
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.price .contain .offers .boxes .box .info {
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.price .contain .offers .boxes .box .info .price {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+}
+
+.price .contain .offers .boxes .box .info .price .num {
+    font-size: 35px;
+}
+
+.price .contain .offers .boxes .box .info .per {
+    color: rgb(255, 255, 255, .5);
+}
+
+.price .contain .offers .boxes .box .info p {
+    color: rgb(255, 255, 255, .5);
+}
+
+.price .contain .offers .boxes .box ul {
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.price .contain .offers .boxes .box .btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.price .contain .offers .boxes .box .btn button {
+    padding: 8px 18px;
+    font-size: 18px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.price .contain .offers .boxes .box .btn button:hover {
+    background-color: #fff;
+    color: #1E1E1E;
+}
+
+.price .contain .offers .boxes .box:nth-child(even) .btn button {
+    background-color: #fff;
+    color: #1E1E1E;
+}
+
+.price .contain .offers .boxes .box:nth-child(even) .btn button:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+.price .contain .offers .sliders {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.price .contain .offers .sliders span {
+    background-color: rgb(255, 255, 255, .5);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.price .contain .offers .sliders span.active {
+    background: linear-gradient(0deg, #F25123, #F25123), linear-gradient(0deg, rgba(242, 81, 35, 0.25), rgba(242, 81, 35, 0.25));
+    outline: 5px solid rgba(242, 81, 35, 0.25);
+}
+
+.price .contain .offers .sliders span:hover {
+    cursor: pointer;
+    background: linear-gradient(0deg, #F25123, #F25123), linear-gradient(0deg, rgba(242, 81, 35, 0.25), rgba(242, 81, 35, 0.25));
+    outline: 5px solid rgba(242, 81, 35, 0.25);
+}
+
+
+/* Footer */
+
+footer .contain {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-image: url('./imgs/msp-back.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+footer .contain .head {
+    font-size: 25px;
+    color: #fff;
+}
+
+footer .contain .part {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    gap: 30px;
+}
+
+footer .contain .part.one p {
+    color: rgb(255, 255, 255, .5);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+footer .contain .part.one .read-more {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+
+footer .contain .part.one .read-more:hover {
+    cursor: pointer;
+    color: #F25123;
+    transform: translateX(5px);
+}
+
+footer .contain .part.one .read-more i {
+    width: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .contain .part.one .read-more i img {
+    width: 100%;
+}
+
+footer .contain .part.one .icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+footer .contain .part.one .icons i {
+    width: 40px;
+}
+
+footer .contain .part.one .icons i:hover {
+    cursor: pointer;
+}
+
+footer .contain .part.one .icons i img {
+    width: 100%;
+}
+
+footer .contain .part.two ul {
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+    color: rgb(255, 255, 255, .5);
+    font-size: 20px;
+    gap: 15px;
+    font-weight: 500;
+}
+
+footer .contain .part.two ul li:hover {
+    cursor: pointer;
+    color: #F25123;
+}
+
+footer .contain .part.three .info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+footer .contain .part.three .info i {
+    width: 20px;
+}
+
+footer .contain .part.three .info i img {
+    width: 100%;
+}
+
+footer .contain .part.three .info span {
+    font-size: 18px;
+    color: rgb(255, 255, 255, .5);
+}
+
+@media (max-width:1200px) {
+    /* framework */
+    .title {
+        gap: 8px;
+    }
+    .title .head {
+        font-size: 20px;
+    }
+    .title .head span {
+        font-size: 15px;
+    }
+    .title .logo picture img {
+        width: 50px;
+    }
+    .contain {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    button {
+        border-radius: 30px;
+    }
+    section .contain {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    /* header */
+    header .contain {
+        justify-content: space-between;
+        gap: 30px;
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+    header .contain .options {
+        gap: 30px;
+    }
+    header .contain .options .logo picture img {
+        width: 70px;
+    }
+    header .contain .options ul {
+        gap: 45px;
+    }
+    header .contain .options ul li a {
+        font-size: 20px;
+    }
+    header .contain .btn {
+        justify-content: flex-end;
+    }
+    header .contain .btn button {
+        font-size: 20px;
+        padding: 10px 35px;
+    }
+    /* Home Section */
+    section.home .contain {
+        gap: 45px;
+    }
+    section.home .contain .content {
+        gap: 30px;
+    }
+    section.home .contain .content h1 {
+        font-size: 65px;
+    }
+    section.home .contain .content .search i {
+        width: 22px;
+    }
+    section.home .contain .content .search i:first-of-type {
+        left: 28px;
+    }
+    section.home .contain .content .search i:last-of-type {
+        right: 28px;
+    }
+    section.home .contain .content .search input {
+        padding: 10px 28px;
+        border-radius: 28px;
+        font-size: 20px;
+    }
+    section.home .contain .content .data {
+        gap: 20px;
+    }
+    section.home .contain .content .data .pics picture {
+        width: 75px;
+        height: 75px;
+    }
+    section.home .contain .content .data .pics picture img {
+        border: 4px solid #fff;
+    }
+    section.home .contain .content .data .pics picture:nth-child(2) {
+        transform: translateX(-18px);
+    }
+    section.home .contain .content .data .pics picture:nth-child(3) {
+        transform: translateX(-36px);
+    }
+    section.home .contain .content .data .pics picture:nth-child(4) {
+        transform: translateX(-54px);
+    }
+    section.home .contain .content .data .text {
+        gap: 20px;
+    }
+    section.home .contain .content .data .text .num {
+        font-size: 28px;
+    }
+    section.home .contain .content .data .text span {
+        font-size: 20px;
+    }
+    /* works section */
+    .works .contain {
+        justify-content: stretch;
+        gap: 45px;
+    }
+    .works .contain .head {
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .works .contain .head .content {
+        gap: 10px;
+    }
+    .works .contain .head .content h2 {
+        font-size: 45px;
+    }
+    .works .contain .head .content p {
+        font-size: 20px;
+        width: 70%;
+    }
+    .works .contain .head .btn button {
+        padding: 10px 28px;
+        font-size: 20px;
+        justify-content: space-between;
+    }
+    .works .contain .boxes {
+        gap: 35px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .works .contain .boxes .box {
+        padding: 28px;
+        gap: 18px;
+        border-radius: 8px;
+    }
+    .works .contain .boxes .box .name {
+        font-size: 22px;
+    }
+    .works .contain .boxes .box picture img {
+        width: 90px;
+        height: 90px;
+    }
+    .works .contain .boxes .box:nth-child(even) picture img {
+        border: 4px solid #F25123;
+    }
+    .works .contain .boxes .box:nth-child(odd) picture img {
+        border: 4px solid #1E1E1E;
+    }
+    .works .contain .boxes .box p {
+        font-size: 20px;
+    }
+    .works .contain .boxes .box .btn button {
+        font-size: 20px;
+        justify-content: space-between;
+        padding: 6px 20px;
+    }
+    /* price Section */
+    .price .contain {
+        gap: 45px;
+    }
+    .price .contain .head {
+        gap: 20px;
+    }
+    .price .contain .head h2 {
+        font-size: 45px;
+    }
+    .price .contain .head p {
+        font-size: 22px;
+        width: 70%;
+    }
+    .price .contain .offers {
+        justify-content: stretch;
+        gap: 45px;
+    }
+    .price .contain .offers .boxes {
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 45px;
+    }
+    .price .contain .offers .boxes .box {
+        gap: 30px;
+        padding: 40px 20px;
+        border-radius: 8px;
+    }
+    .price .contain .offers .boxes .box .head {
+        font-size: 20px;
+    }
+    .price .contain .offers .boxes .box .info .price {
+        font-size: 20px;
+    }
+    .price .contain .offers .boxes .box .info .price .num {
+        font-size: 32px;
+    }
+    .price .contain .offers .boxes .box ul {
+        gap: 20px;
+        font-size: 18px;
+    }
+    .price .contain .offers .boxes .box .btn button {
+        padding: 8px 18px;
+        font-size: 18px;
+    }
+    .price .contain .offers .sliders {
+        gap: 15px;
+    }
+    .price .contain .offers .sliders span {
+        width: 15px;
+        height: 15px;
+    }
+    .price .contain .offers .sliders span.active {
+        outline: 4px solid rgba(242, 81, 35, 0.25);
+    }
+    .price .contain .offers .sliders span:hover {
+        outline: 4px solid rgba(242, 81, 35, 0.25);
+    }
+    /* Footer */
+    footer .contain {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    footer .contain .part {
+        gap: 30px;
+    }
+    footer .contain .part.one .title {
+        gap: 10px;
+    }
+    footer .contain .head {
+        font-size: 20px;
+    }
+    footer .contain .head span {
+        font-size: 16px;
+    }
+    footer .contain .part.one .logo picture img {
+        width: 50px;
+    }
+    footer .contain .part.one p {
+        font-size: 20px;
+    }
+    footer .contain .part.one .read-more {
+        gap: 10px;
+        font-size: 18px;
+    }
+    footer .contain .part.one .read-more:hover {
+        transform: translateX(5px);
+    }
+    footer .contain .part.one .read-more i {
+        width: 15px;
+    }
+    footer .contain .part.one .icons {
+        gap: 20px;
+    }
+    footer .contain .part.one .icons i {
+        width: 40px;
+    }
+    footer .contain .part.two ul {
+        font-size: 20px;
+        gap: 15px;
+    }
+    footer .contain .part.three .info {
+        gap: 10px;
+    }
+    footer .contain .part.three .info i {
+        width: 20px;
+    }
+    footer .contain .part.three .info span {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:992px) {
+    /* framework */
+    .title {
+        gap: 5px;
+    }
+    .title .head {
+        font-size: 18px;
+    }
+    .title .head span {
+        font-size: 14px;
+    }
+    .title .logo picture img {
+        width: 40px;
+    }
+    .contain {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    button {
+        border-radius: 25px;
+    }
+    section .contain {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    /* header */
+    header .contain {
+        justify-content: space-between;
+        gap: 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        position: relative;
+    }
+    header .contain .options {
+        gap: 30px;
+        width: 100%;
+        justify-content: space-between;
+    }
+    header .contain .options .logo picture img {
+        width: 70px;
+    }
+    header .contain .options ul {
+        display: none;
+        gap: 45px;
+    }
+    header .contain .options ul li a {
+        font-size: 20px;
+    }
+    header .contain>.btn {
+        justify-content: flex-end;
+        display: none;
+    }
+    header .contain .btn button {
+        font-size: 20px;
+        padding: 8px 35px;
+    }
+    header .contain .list-icon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        opacity: 1;
+        visibility: visible;
+        width: 35px;
+        cursor: pointer;
+    }
+    header .contain .list-icon img {
+        width: 100%;
+    }
+    /* responsive Header */
+    header .contain .header {
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: flex !important;
+    }
+    header .contain .header .contain {
+        display: grid;
+        align-items: center;
+        justify-content: stretch;
+        gap: 50px;
+        background-image: url("./imgs//msp-back.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        transform: translateY(-100%);
+    }
+    header .contain .header .contain.open {
+        transform: translateY(0);
+    }
+    header .contain .header .contain .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    header .contain .header .contain .top>i {
+        width: 35px;
+        cursor: pointer;
+    }
+    header .contain .header .contain .top>i:hover {
+        transform: rotate(90deg)
+    }
+    header .contain .header .contain .top>i img {
+        width: 100%;
+    }
+    header .contain .header .contain ul {
+        display: grid;
+        gap: 20px;
+    }
+    header .contain .header .contain ul li a {
+        position: relative;
+    }
+    header .contain .header .contain ul li {
+        padding: 10px;
+    }
+    header .contain .header .contain ul li a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        width: 0;
+        right: 0;
+        height: 3px;
+        background-color: #F25123;
+        transition: ease-in-out all .3s;
+    }
+    header .contain .header .contain ul li a:hover::after {
+        width: 100%;
+        left: 0;
+    }
+    header .contain .header .contain .btn {
+        display: flex;
+        justify-content: center;
+    }
+    /* Home Section */
+    section.home .contain {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 35px;
+    }
+    section.home .contain .content {
+        gap: 25px;
+    }
+    section.home .contain .content h1 {
+        font-size: 60px;
+    }
+    section.home .contain .content .search i {
+        width: 20px;
+    }
+    section.home .contain .content .search i:first-of-type {
+        left: 25px;
+    }
+    section.home .contain .content .search i:last-of-type {
+        right: 25px;
+    }
+    section.home .contain .content .search input {
+        padding: 8px 25px;
+        border-radius: 25px;
+        font-size: 18px;
+    }
+    section.home .contain .content .data {
+        gap: 15px;
+    }
+    section.home .contain .content .data .pics picture {
+        width: 70px;
+        height: 70px;
+    }
+    section.home .contain .content .data .pics picture img {
+        border: 3px solid #fff;
+    }
+    section.home .contain .content .data .pics picture:nth-child(2) {
+        transform: translateX(-15px);
+    }
+    section.home .contain .content .data .pics picture:nth-child(3) {
+        transform: translateX(-30px);
+    }
+    section.home .contain .content .data .pics picture:nth-child(4) {
+        transform: translateX(-45px);
+    }
+    section.home .contain .content .data .text {
+        gap: 15px;
+    }
+    section.home .contain .content .data .text .num {
+        font-size: 25px;
+    }
+    section.home .contain .content .data .text span {
+        font-size: 18px;
+    }
+    section.home .contain>.logo {
+        display: none;
+    }
+    /* works section */
+    .works .contain {
+        justify-content: stretch;
+        gap: 35px;
+    }
+    .works .contain .head {
+        display: grid;
+        justify-content: center;
+        gap: 15px;
+    }
+    .works .contain .head .content {
+        gap: 5px;
+    }
+    .works .contain .head .content h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+    .works .contain .head .content p {
+        text-align: center;
+        font-size: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        width: 60%;
+    }
+    .works .contain .head .btn {
+        justify-content: center;
+    }
+    .works .contain .head .btn button {
+        padding: 8px 25px;
+        font-size: 18px;
+        justify-content: center;
+    }
+    .works .contain .boxes {
+        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .works .contain .boxes .box {
+        padding: 25px;
+        gap: 15px;
+        border-radius: 7px;
+    }
+    .works .contain .boxes .box .name {
+        font-size: 20px;
+    }
+    .works .contain .boxes .box picture img {
+        width: 80px;
+        height: 80px;
+    }
+    .works .contain .boxes .box:nth-child(even) picture img {
+        border: 3px solid #F25123;
+    }
+    .works .contain .boxes .box:nth-child(odd) picture img {
+        border: 3px solid #1E1E1E;
+    }
+    .works .contain .boxes .box p {
+        font-size: 18px;
+    }
+    .works .contain .boxes .box .btn button {
+        font-size: 18px;
+        padding: 5px 15px;
+    }
+    /* price Section */
+    .price .contain .head {
+        gap: 15px;
+    }
+    .price .contain .head h2 {
+        font-size: 40px;
+    }
+    .price .contain .head p {
+        font-size: 20px;
+    }
+    .price .contain .offers {
+        justify-content: stretch;
+    }
+    .price .contain .offers .boxes {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 45px;
+    }
+    .price .contain .offers .boxes .box {
+        gap: 25px;
+        padding: 30px 15px;
+        border-radius: 6px;
+    }
+    .price .contain .offers .boxes .box .head {
+        font-size: 18px;
+    }
+    .price .contain .offers .boxes .box .info .price {
+        font-size: 18px;
+    }
+    .price .contain .offers .boxes .box .info .price .num {
+        font-size: 30px;
+    }
+    .price .contain .offers .boxes .box ul {
+        gap: 15px;
+        font-size: 16px;
+    }
+    .price .contain .offers .boxes .box .btn button {
+        padding: 6px 15px;
+        font-size: 16px;
+    }
+    .price .contain .offers .sliders {
+        gap: 10px;
+    }
+    .price .contain .offers .sliders span {
+        width: 12px;
+        height: 12px;
+    }
+    .price .contain .offers .sliders span.active {
+        outline: 3px solid rgba(242, 81, 35, 0.25);
+    }
+    .price .contain .offers .sliders span:hover {
+        outline: 3px solid rgba(242, 81, 35, 0.25);
+    }
+    /* Footer */
+    footer .contain {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer .contain .part {
+        gap: 25px;
+        justify-content: flex-start;
+    }
+    footer .contain .part.one .title {
+        gap: 8px;
+    }
+    footer .contain .head {
+        font-size: 18px;
+    }
+    footer .contain .head span {
+        font-size: 15px;
+    }
+    footer .contain .part.one .logo picture img {
+        width: 40px;
+    }
+    footer .contain .part.one p {
+        font-size: 18px;
+    }
+    footer .contain .part.one .read-more {
+        gap: 8px;
+        font-size: 16px;
+    }
+    footer .contain .part.one .read-more i {
+        width: 12px;
+    }
+    footer .contain .part.one .icons {
+        gap: 15px;
+    }
+    footer .contain .part.one .icons i {
+        width: 35px;
+    }
+    footer .contain .part.two ul {
+        font-size: 18px;
+        gap: 10px;
+    }
+    footer .contain .part.three .info {
+        gap: 8px;
+    }
+    footer .contain .part.three .info i {
+        width: 15px;
+    }
+    footer .contain .part.three .info span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:768px) {
+    /* framework */
+    .title .head {
+        font-size: 16px;
+    }
+    .title .head span {
+        font-size: 12px;
+    }
+    .title .logo picture img {
+        width: 35px;
+    }
+    .contain {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    button {
+        border-radius: 20px;
+    }
+    section .contain {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    /* header */
+    header .contain {
+        gap: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    header .contain .options {
+        gap: 20px;
+    }
+    header .contain .options .logo picture img {
+        width: 60px;
+    }
+    header .contain ul {
+        gap: 40px;
+    }
+    header .contain ul li a {
+        font-size: 16px;
+    }
+    header .contain .btn button {
+        font-size: 16px;
+        padding: 5px 20px;
+    }
+    header .contain .list-icon {
+        width: 30px;
+        justify-content: flex-end;
+    }
+    /* responsive Header */
+    header .contain .header .contain {
+        gap: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    header .contain .header .contain .top {
+        gap: 20px;
+    }
+    header .contain .header .contain .top>i {
+        width: 25px;
+    }
+    header .contain .header .contain ul {
+        gap: 15px;
+    }
+    header .contain .header .contain ul li {
+        padding: 8px;
+    }
+    /* Home Section */
+    section.home .contain {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 35px;
+        justify-content: center;
+    }
+    section.home .contain .content {
+        gap: 25px;
+        justify-content: center;
+        text-align: center;
+    }
+    section.home .contain .content h1 {
+        font-size: 50px;
+    }
+    section.home .contain .content .search i {
+        width: 18px;
+    }
+    section.home .contain .content .search i:first-of-type {
+        left: 20px;
+    }
+    section.home .contain .content .search i:last-of-type {
+        right: 20px;
+    }
+    section.home .contain .content .search input {
+        padding: 6px 20px;
+        border-radius: 20px;
+        font-size: 16px;
+    }
+    section.home .contain .content .data {
+        gap: 10px;
+        justify-content: center;
+    }
+    section.home .contain .content .data .pics picture {
+        width: 50px;
+        height: 50px;
+    }
+    section.home .contain .content .data .pics picture img {
+        border: 2px solid #fff;
+    }
+    section.home .contain .content .data .pics picture:nth-child(2) {
+        transform: translateX(-10px);
+    }
+    section.home .contain .content .data .pics picture:nth-child(3) {
+        transform: translateX(-20px);
+    }
+    section.home .contain .content .data .pics picture:nth-child(4) {
+        transform: translateX(-30px);
+    }
+    section.home .contain .content .data .text {
+        gap: 10px;
+    }
+    section.home .contain .content .data .text .num {
+        font-size: 22px;
+    }
+    section.home .contain .content .data .text span {
+        font-size: 16px;
+    }
+    /* works section */
+    .works .contain {
+        gap: 30px;
+    }
+    .works .contain .head {
+        gap: 10px;
+    }
+    .works .contain .head .content h2 {
+        font-size: 35px;
+    }
+    .works .contain .head .content p {
+        font-size: 16px;
+        width: 80%;
+    }
+    .works .contain .head .btn button {
+        padding: 6px 20px;
+        font-size: 16px;
+    }
+    .works .contain .boxes {
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .works .contain .boxes .box {
+        padding: 20px;
+        gap: 10px;
+        border-radius: 6px;
+    }
+    .works .contain .boxes .box .name {
+        font-size: 18px;
+    }
+    .works .contain .boxes .box picture img {
+        width: 60px;
+        height: 60px;
+    }
+    .works .contain .boxes .box:nth-child(even) picture img {
+        border: 2px solid #F25123;
+    }
+    .works .contain .boxes .box:nth-child(odd) picture img {
+        border: 2px solid #1E1E1E;
+    }
+    .works .contain .boxes .box p {
+        font-size: 16px;
+    }
+    .works .contain .boxes .box .btn button {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+    /* price Section */
+    .price .contain .head {
+        gap: 10px;
+    }
+    .price .contain .head h2 {
+        font-size: 35px;
+    }
+    .price .contain .head p {
+        font-size: 18px;
+    }
+    .price .contain .offers .boxes {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 30px;
+    }
+    .price .contain .offers .boxes .box {
+        gap: 20px;
+        padding: 20px 10px;
+        border-radius: 5px;
+    }
+    .price .contain .offers .boxes .box .head {
+        font-size: 16px;
+    }
+    .price .contain .offers .boxes .box .info .price {
+        font-size: 16px;
+    }
+    .price .contain .offers .boxes .box .info .price .num {
+        font-size: 25px;
+    }
+    .price .contain .offers .boxes .box ul {
+        gap: 10px;
+        font-size: 14px;
+    }
+    .price .contain .offers .boxes .box .btn button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    .price .contain .offers .sliders span {
+        width: 10px;
+        height: 10px;
+    }
+    .price .contain .offers .sliders span.active {
+        outline: 2px solid rgba(242, 81, 35, 0.25);
+    }
+    .price .contain .offers .sliders span:hover {
+        outline: 2px solid rgba(242, 81, 35, 0.25);
+    }
+    /* Footer */
+    footer .contain {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        gap: 25px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer .contain .part {
+        gap: 20px;
+    }
+    footer .contain .head {
+        font-size: 16px;
+    }
+    footer .contain .head span {
+        font-size: 13px;
+    }
+    footer .contain .part.one .logo picture img {
+        width: 30px;
+    }
+    footer .contain .part.one p {
+        font-size: 16px;
+    }
+    footer .contain .part.one .read-more {
+        gap: 5px;
+        font-size: 13px;
+    }
+    footer .contain .part.one .read-more i {
+        width: 10px;
+    }
+    footer .contain .part.one .icons {
+        gap: 10px;
+    }
+    footer .contain .part.one .icons i {
+        width: 30px;
+    }
+    footer .contain .part.two ul {
+        font-size: 16px;
+        gap: 5px;
+    }
+    footer .contain .part.three .info {
+        gap: 5px;
+    }
+    footer .contain .part.three .info i {
+        width: 10px;
+    }
+    footer .contain .part.three .info span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:640px) {
+    /* framework */
+    .title .head {
+        font-size: 14px;
+    }
+    .title .head span {
+        font-size: 10px;
+    }
+    .title .logo picture img {
+        width: 30px;
+    }
+    .contain {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    button {
+        border-radius: 15px;
+    }
+    section .contain {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    /* header */
+    header .contain {
+        gap: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    header .contain .options {
+        gap: 15px;
+    }
+    header .contain .options .logo picture img {
+        width: 50px;
+    }
+    header .contain ul {
+        gap: 30px;
+    }
+    header .contain ul li a {
+        font-size: 14px;
+    }
+    header .contain .btn button {
+        font-size: 14px;
+        padding: 4px 18px;
+    }
+    header .contain .list-icon {
+        width: 25px;
+    }
+    /* responsive Header */
+    header .contain .header .contain {
+        gap: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    header .contain .header .contain .top {
+        gap: 15px;
+    }
+    header .contain .header .contain .top>i {
+        width: 20px;
+    }
+    header .contain .header .contain ul {
+        gap: 10px;
+    }
+    header .contain .header .contain ul li {
+        padding: 5px;
+    }
+    /* Home Section */
+    section.home .contain {
+        gap: 30px;
+    }
+    section.home .contain .content {
+        gap: 20px;
+    }
+    section.home .contain .content h1 {
+        font-size: 40px;
+    }
+    section.home .contain .content .search i {
+        width: 15px;
+    }
+    section.home .contain .content .search i:first-of-type {
+        left: 15px;
+    }
+    section.home .contain .content .search i:last-of-type {
+        right: 15px;
+    }
+    section.home .contain .content .search input {
+        font-size: 14px;
+    }
+    section.home .contain .content .data {
+        gap: 5px;
+    }
+    section.home .contain .content .data .pics picture {
+        width: 40px;
+        height: 40px;
+    }
+    section.home .contain .content .data .text .num {
+        font-size: 20px;
+    }
+    section.home .contain .content .data .text span {
+        font-size: 14px;
+    }
+    /* works section */
+    .works .contain .head .content h2 {
+        font-size: 30px;
+    }
+    .works .contain .head .content p {
+        font-size: 14px;
+        width: 100%;
+    }
+    .works .contain .head .btn button {
+        padding: 4px 20px;
+        font-size: 14px;
+    }
+    .works .contain .boxes {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .works .contain .boxes .box {
+        padding: 15px;
+        gap: 5px;
+        border-radius: 4px;
+    }
+    .works .contain .boxes .box .name {
+        font-size: 16px;
+    }
+    .works .contain .boxes .box picture img {
+        width: 50px;
+        height: 50px;
+    }
+    .works .contain .boxes .box p {
+        font-size: 14px;
+    }
+    .works .contain .boxes .box .btn button {
+        font-size: 14px;
+        padding: 3px 10px;
+    }
+    /* price Section */
+    .price .contain .head h2 {
+        font-size: 30px;
+    }
+    .price .contain .head p {
+        font-size: 16px;
+    }
+    .price .contain .offers .boxes {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .price .contain .offers .boxes .box .head {
+        font-size: 14px;
+    }
+    .price .contain .offers .boxes .box .info .price {
+        font-size: 14px;
+    }
+    .price .contain .offers .boxes .box .info .price .num {
+        font-size: 20px;
+    }
+    .price .contain .offers .sliders span {
+        width: 10px;
+        height: 10px;
+    }
+    /* Footer */
+    footer .contain {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        gap: 50px;
+    }
+    footer .contain .head {
+        font-size: 14px;
+    }
+    footer .contain .head span {
+        font-size: 12px;
+    }
+    footer .contain .part.one .logo picture img {
+        width: 20px;
+    }
+    footer .contain .part.one p {
+        font-size: 14px;
+    }
+    footer .contain .part.one .read-more {
+        font-size: 12px;
+    }
+    footer .contain .part.one .icons i {
+        width: 20px;
+    }
+    footer .contain .part.two ul {
+        font-size: 14px;
+    }
+}
